@@ -9,23 +9,24 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #EEF3FA; min-height: 100vh; }
     .panel { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
     .logo-row { display: flex; align-items: center; gap: 12px; }
     .logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #185FA5; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 18px; }
     .logo-text h2 { font-size: 16px; font-weight: 600; color: #0a1a2e; }
     .logo-text p { font-size: 13px; color: #4a5568; }
     .site-link { font-size: 13px; color: #185FA5; text-decoration: none; display: flex; align-items: center; gap: 4px; }
-    .badge { display: inline-block; background: #185FA5; color: white; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 20px; margin-bottom: 1.2rem; }
+    .hero { text-align: center; margin-bottom: 2rem; }
+    .badge { display: inline-block; background: #185FA5; color: white; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 20px; margin-bottom: 1rem; }
     .hero h1 { font-size: 2.2rem; font-weight: 800; color: #0a1a2e; line-height: 1.15; margin-bottom: 0.6rem; }
-    .hero p { font-size: 14px; color: #4a5568; max-width: 480px; line-height: 1.6; margin-bottom: 1.5rem; }
-    .search-wrap { position: relative; margin-bottom: 2rem; max-width: 420px; }
+    .hero p { font-size: 14px; color: #4a5568; margin-bottom: 1.5rem; }
+    .search-wrap { max-width: 420px; margin: 0 auto; position: relative; }
     .search-wrap i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #8a9ab0; font-size: 18px; pointer-events: none; }
     .search-wrap input { width: 100%; padding: 10px 14px 10px 42px; border-radius: 10px; border: 1px solid #c8d8eb; background: white; font-size: 14px; color: #0a1a2e; outline: none; transition: border 0.2s; }
     .search-wrap input:focus { border-color: #185FA5; }
     .search-wrap input::placeholder { color: #8a9ab0; }
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 2rem; }
     @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.6rem; } }
-    .card { background: white; border-radius: 12px; padding: 1.4rem; border: 0.5px solid #d0dcea; border-top: 3px solid #185FA5; position: relative; display: flex; flex-direction: column; gap: 10px; transition: opacity 0.2s; }
+    .card { background: white; border-radius: 12px; padding: 1.4rem; border: 0.5px solid #d0dcea; border-top: 3px solid #185FA5; position: relative; display: flex; flex-direction: column; gap: 10px; }
     .card.hidden { display: none; }
     .card-type { position: absolute; top: 1.1rem; right: 1.2rem; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: #185FA5; }
     .card-icon { width: 48px; height: 48px; border-radius: 50%; background: #185FA5; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; }
@@ -49,16 +50,14 @@
       <a href="https://vindi.com.br" class="site-link" target="_blank">vindi.com.br <i class="ti ti-arrow-up-right"></i></a>
     </div>
 
-    <span class="badge">Painel de Acesso</span>
-
     <div class="hero">
+      <span class="badge">Painel de Acesso</span>
       <h1>Tudo de pricing,<br>em um só lugar.</h1>
       <p>Ferramentas, planilhas e documentos do time de pricing.</p>
-    </div>
-
-    <div class="search-wrap">
-      <i class="ti ti-search"></i>
-      <input type="text" id="search" placeholder="Buscar ferramenta..." />
+      <div class="search-wrap">
+        <i class="ti ti-search"></i>
+        <input type="text" id="search" placeholder="Buscar ferramenta..." />
+      </div>
     </div>
 
     <div class="grid" id="grid">
