@@ -107,20 +107,18 @@
   </div>
 
   <script>
-    const input = document.getElementById('search');
-    const cards = document.querySelectorAll('.card');
-    const noResults = document.getElementById('no-results');
+  const input = document.getElementById('search');
+  const cards = document.querySelectorAll('.card[data-name]');
+  const noResults = document.getElementById('no-results');
 
-    input.addEventListener('input', () => {
-      const q = input.value.toLowerCase().trim();
-      let visible = 0;
-      cards.forEach(card => {
-        const match = card.dataset.name.includes(q);
-        card.classList.toggle('hidden', !match);
-        if (match) visible++;
-      });
-      noResults.style.display = visible === 0 ? 'block' : 'none';
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(card => {
+      const match = card.dataset.name.includes(q);
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
     });
-  </script>
-</body>
-</html>
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  });
+</script>
